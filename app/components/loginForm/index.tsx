@@ -20,11 +20,13 @@ export const LoginForm = () => {
       })
 
       const submitForm = async () => {
-        const response = await signIn('credentials', {
-          ...fields,
-          callbackUrl: "/api/v1/login",
-        });
 
+        const response = await signIn('credentials', {
+            email: fields.email,
+            password: fields.password,
+            redirect: false
+        })
+    
         if (response?.error) {
           return
         }

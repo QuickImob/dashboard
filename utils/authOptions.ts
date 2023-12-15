@@ -15,16 +15,16 @@ export const nextAuthOptions: NextAuthOptions = {
       // @ts-ignore
       async authorize(credentials: { email?: string; password?: string }, req) {
         const response = await axios
-          .post('/login', {
+          .post('/api/login', {
             email: credentials?.email,
             password: credentials?.password
           })
 
-        if (!response.data?.success) {
+        if (!response.data) {
           return null
         }
 
-        return response.data.data
+        return response.data
       }
     })
   ],

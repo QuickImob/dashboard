@@ -7,7 +7,6 @@ import useFields from "@/hooks/useFields";
 import {useI18n} from "@/locales/client";
 import { PasswordInput } from "../form/passwordInput";
 import {useRouter} from "next/navigation";
-import {signIn} from "next-auth/react";
 import Link from "next/link";
 
 export const RegisterForm = () => {
@@ -21,14 +20,6 @@ export const RegisterForm = () => {
 
       const submitForm = async () => {
 
-        const response = await signIn('credentials', {fields})
-    
-        if (response?.error) {
-            console.log('teste')
-          return
-        }
-    
-        router.replace('/dashboard')
       }
     
 
