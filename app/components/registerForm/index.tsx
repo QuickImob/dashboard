@@ -10,7 +10,7 @@ import {useRouter} from "next/navigation";
 import {signIn} from "next-auth/react";
 import Link from "next/link";
 
-export const LoginForm = () => {
+export const RegisterForm = () => {
     const t = useI18n()
     const router = useRouter()
 
@@ -24,6 +24,7 @@ export const LoginForm = () => {
         const response = await signIn('credentials', {fields})
     
         if (response?.error) {
+            console.log('teste')
           return
         }
     
@@ -32,8 +33,7 @@ export const LoginForm = () => {
     
 
     return(
-        <div className="loginFormContainer">
-            <div className="loginImage"></div>
+        <div className="registerFormContainer">
             <h1>{t('User Login')}</h1>
             <div className="loginForm">
                 <EmailInput
@@ -47,7 +47,7 @@ export const LoginForm = () => {
                     sendInput={handleFields}
                 />
                 <Button onClick={submitForm}>{t('Enter')}</Button>
-                <Link href={''}>Ainda não tem cadastro? <b>Cadastre-se</b>.</Link>
+
             </div>
         </div>
     )
