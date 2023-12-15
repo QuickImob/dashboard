@@ -1,8 +1,8 @@
+import { LoginForm } from "@/app/components/loginForm";
+
 export default function Page() {
 
     return (
-      <>
-          <p>teste</p>
-      </>
+      <LoginForm/>
     )
   }

@@ -1,0 +1,19 @@
+.loginFormContainer{
+    @apply
+    flex flex-col gap-4
+}
+
+.loginImage{
+    @apply
+    h-64 bg-gray-200 rounded-t-lg
+}
+
+.loginFormContainer h1{
+    @apply
+    text-center text-xl font-bold
+}
+
+.loginFormContainer .loginForm{
+    @apply
+    px-20 pb-20 w-full mx-auto gap-6 flex flex-col
+}

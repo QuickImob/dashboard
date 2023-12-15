@@ -1,0 +1,9 @@
+.inputContainer{
+    @apply
+    flex flex-col relative
+}
+
+.inputContainer input.invalid {
+    @apply
+    border-red-600 focus:outline-red-600 border-2
+}

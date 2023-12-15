@@ -1,0 +1,20 @@
+.login-main{
+    @apply
+    h-screen overflow-hidden w-full flex items-center justify-center bg-gray-600
+}
+
+.form-container{
+    @apply
+    w-full max-w-xl bg-white rounded-lg
+}
+
+.container-language {
+    @apply
+    absolute z-20 top-5 right-5 flex items-center gap-2
+}
+
+.container-language span {
+    @apply
+    text-black text-sm
+    lg:text-blue-50
+}
