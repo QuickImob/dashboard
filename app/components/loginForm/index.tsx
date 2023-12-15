@@ -20,9 +20,11 @@ export const LoginForm = () => {
       })
 
       const submitForm = async () => {
+        const response = await signIn('credentials', {
+          ...fields,
+          callbackUrl: "/api/v1/login",
+        });
 
-        const response = await signIn('credentials', {fields})
-    
         if (response?.error) {
           return
         }
