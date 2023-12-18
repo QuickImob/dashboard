@@ -1,0 +1,55 @@
+.header{
+    @apply
+    w-full h-16 shadow-md fixed top-0
+}
+
+.header-margin{
+    @apply
+    mt-16
+}
+
+.header-container{
+    @apply
+    max-w-7xl mx-auto flex items-center justify-between h-full px-4
+}
+
+.header-actions{
+    @apply
+    flex gap-2
+}
+
+.header .toogle-menu{
+    @apply
+    relative
+}
+
+.header .toogle-icon{
+    @apply
+    w-10 h-10 border rounded-md border-gray-500 flex flex-col p-1 justify-around cursor-pointer
+}
+
+.header .toogle-icon span{
+    @apply
+    w-full h-0.5 bg-gray-500 transition-all duration-200
+}
+
+.header .login-button a{
+    @apply
+    h-full flex gap-2 items-center border border-gray-500 px-4 py-1 rounded-lg bg-gray-200 border-gray-300
+    hover:bg-gray-800 hover:text-white transition text-gray-600 no-underline
+}
+
+.header .toogle-icon.true span:nth-child(1){
+    transform:rotate(135deg);
+    margin-top:3px;
+}
+
+.header .toogle-icon.true span:nth-child(2){
+    @apply
+    hidden
+}
+
+.header .toogle-icon.true span:nth-child(3){
+    transform:rotate(-135deg);
+    margin-top:-24px;
+}

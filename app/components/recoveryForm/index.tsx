@@ -5,12 +5,10 @@ import './styles.css';
 import { EmailInput } from "../form/emailInput";
 import useFields from "@/hooks/useFields";
 import {useI18n} from "@/locales/client";
-import { PasswordInput } from "../form/passwordInput";
 import {useRouter} from "next/navigation";
 import {signIn} from "next-auth/react";
-import Link from "next/link";
 
-export const LoginForm = () => {
+export const RecoveryForm = () => {
     const t = useI18n()
     const router = useRouter()
 
@@ -38,21 +36,14 @@ export const LoginForm = () => {
     return(
         <div className="loginFormContainer">
             <div className="loginImage"></div>
-            <h1>{t('User Login')}</h1>
+            <h1>{t('Password recovery')}</h1>
             <div className="loginForm">
                 <EmailInput
                     id='email'
-                    label={t('Email')}
+                    label={t('Enter your email to receive the recovery link.')}
                     sendInput={handleFields}
                 />
-                <PasswordInput
-                    id='password'
-                    label={t('Password')}
-                    sendInput={handleFields}
-                />
-                <Link href={'/recovery'}><p>{t('Forgot password?')}</p></Link>
-                <Button onClick={submitForm}>{t('Enter')}</Button>
-                <Link href={'/register'}>{t("Don't have a registration yet?")} <b>{t("Register")}</b>.</Link>
+                <Button onClick={submitForm}>{t('Recover password')}</Button>
             </div>
         </div>
     )

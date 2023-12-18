@@ -1,5 +1,13 @@
-import {redirect} from "next/navigation";
+import { Footer } from "@/app/components/footer";
+import { Header } from "@/app/components/header";
 
-export default async function Page() {
-  redirect('/dashboard')
-}
+export default function Page() {
+
+    return (
+      <>
+        <Header/>
+        <p>teste</p>
+        <Footer/>
+      </>
+    )
+  }

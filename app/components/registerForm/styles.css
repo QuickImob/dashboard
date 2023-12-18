@@ -1,4 +1,4 @@
-.loginFormContainer{
+.registerFormContainer{
     @apply
     flex flex-col gap-4
 }
@@ -8,17 +8,12 @@
     h-64 bg-gray-200 rounded-t-lg
 }
 
-.loginFormContainer h1{
+.registerFormContainer h1{
     @apply
-    text-center text-xl font-bold
+    text-center text-xl font-bold mt-8
 }
 
-.loginFormContainer .loginForm{
+.registerFormContainer .registerForm{
     @apply
     px-20 pb-10 w-full mx-auto gap-6 flex flex-col
-}
-
-.loginFormContainer a{
-    @apply
-    text-center
 }
