@@ -1,0 +1,34 @@
+.breadcrumbs-container{
+    margin-bottom: 20px;
+    margin-top: -16px;
+    margin-left: -32px;
+    width:calc(100% + 64px);
+    @apply
+    p-4 bg-white sticky h-12 shadow-md flex gap-2 items-center justify-between
+}
+
+.breadcrumbs-links{
+    @apply
+    flex gap-2
+}
+
+.breadcrumbs-container .bread-item{
+    @apply
+    flex gap-2 items-center
+}
+
+.breadcrumbs-container .bread-item a{
+    @apply
+    text-blue-600 hover:text-blue-800 hover:underline
+}
+
+.breadcrumbs-container .bread-item p{
+    @apply
+    m-0
+}
+
+.breadcrumbs-actions button{
+    @apply
+    flex items-center gap-1 bg-emerald-200 rounded-md py-1 px-4 text-emerald-800
+    hover:bg-emerald-700 hover:text-emerald-200
+}

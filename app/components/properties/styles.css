@@ -1,0 +1,40 @@
+.dash-body{
+    @apply
+    h-screen bg-gray-100 flex
+}
+
+.dash-sidebar{
+    width:300px;
+    @apply
+    h-full bg-white border-r border-gray-400 pt-16 transition-all duration-200
+}
+
+.dash-sidebar.true{
+    width:60px;
+}
+
+.dash-content{
+    @apply
+    pt-20 p-8 w-full
+}
+
+.dash-menu a{
+    @apply
+    h-12 w-full gap-2 flex items-center px-4 hover:bg-gray-400 hover:text-white transition
+    text-lg text-gray-600 font-bold
+}
+
+.dash-sidebar span{
+    @apply
+    transition-opacity opacity-0 delay-1000
+}
+
+.dash-sidebar.false span{
+    @apply
+    transition-opacity opacity-100 delay-1000
+}
+
+.dash-menu a svg{
+    @apply
+    w-6 h-6
+}

@@ -1,0 +1,15 @@
+.galleryModal .container-tabs{
+    @apply
+    flex  px-20 border-b-2 py-2 mb-4 flex-wrap
+}
+
+.galleryModal .container-tabs .tab{
+    @apply
+    flex-1 flex gap-2 items-center justify-center cursor-pointer text-blue-400
+    hover:text-blue-800 h-12 rounded-md
+}
+
+.galleryModal .container-tabs .tab.active{
+    @apply
+    bg-blue-600 text-white
+}

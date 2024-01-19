@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from "reactstrap";
+import { Button, Spinner } from "reactstrap";
 import './styles.css';
 import { EmailInput } from "../form/emailInput";
 import useFields from "@/hooks/useFields";
@@ -9,10 +9,14 @@ import { PasswordInput } from "../form/passwordInput";
 import {useRouter} from "next/navigation";
 import {signIn} from "next-auth/react";
 import Link from "next/link";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import { useState } from "react";
 
 export const LoginForm = () => {
     const t = useI18n()
     const router = useRouter()
+    const [isSubmitting, setIsSubmitting] = useState(false)
 
     const {fields, handleFields} = useFields({
         email: '',
@@ -20,19 +24,31 @@ export const LoginForm = () => {
       })
 
       const submitForm = async () => {
+        try {
+            setIsSubmitting(true)
+            const response = await signIn('credentials', {
+                email: fields.email,
+                password: fields.password,
+                redirect: false
+            })
+            if (!response?.error) {
+                setIsSubmitting(false)
 
-        const response = await signIn('credentials', {
-            email: fields.email,
-            password: fields.password,
-            redirect: false
-        })
-    
-        if (response?.error) {
-          return
+                toast.success('Login bem-sucedido!', {
+                    position: "bottom-right",
+                })
+                router.replace('/dashboard');
+            } else {
+                setIsSubmitting(false)
+
+                toast.error('Erro ao fazer login. Verifique suas credenciais.', {
+                    position: "bottom-right",
+                })
+            }
+        } catch (error) {
+            console.error('Erro inesperado:', error);
         }
-    
-        router.replace('/dashboard')
-      }
+    }
     
 
     return(
@@ -51,9 +67,16 @@ export const LoginForm = () => {
                     sendInput={handleFields}
                 />
                 <Link href={'/recovery'}><p>{t('Forgot password?')}</p></Link>
-                <Button onClick={submitForm}>{t('Enter')}</Button>
+                <Button
+                    onClick={submitForm}
+                    className="login-button"
+                >
+                    {t('Enter')}
+                    {isSubmitting && <Spinner />}
+                </Button>
                 <Link href={'/register'}>{t("Don't have a registration yet?")} <b>{t("Register")}</b>.</Link>
             </div>
+            <ToastContainer />
         </div>
     )
 }

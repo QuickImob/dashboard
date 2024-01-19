@@ -1,0 +1,30 @@
+.profileMenuToogle{
+    @apply
+    w-12 h-12 bg-gray-200 border-2 border-blue-300 rounded-full mr-5 cursor-pointer
+    transition hover:scale-105
+}
+
+.profileMenu{
+    @apply
+    fixed z-50 right-4 bg-white top-16 p-4 rounded-md shadow-md
+}
+
+.profileMenu.false{
+    @apply
+    hidden
+}
+
+.profileMenu li{
+    @apply
+    list-none px-0 flex gap-4 items-center
+}
+
+.profileMenu .divider{
+    @apply
+    w-full h-px bg-gray-200 flex my-2
+}
+
+.profileMenu a{
+    @apply
+    hover:text-blue-800
+}

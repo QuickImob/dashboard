@@ -1,0 +1,50 @@
+.addressEditContainer{
+    @apply
+    w-full flex gap-4 px-20 py-12
+}
+
+.addressEditContainer .profile-side-bar{
+    flex:1;
+
+    @apply
+    flex flex-col gap-4 items-center justify-center
+}
+
+.addressEditContainer .profile-side-bar svg{
+    @apply
+    w-60 h-60 text-gray-200
+}
+
+.addressEditContainer .profile-body{
+    flex:2;
+
+    @apply
+    block gap-4
+}
+
+.addressEditContainer .profile-body .field-list-item{
+    flex:1;
+
+    @apply
+    relative flex items-center flex-row gap-4 px-4 py-2
+}
+
+.addressEditContainer .profile-body .field-list-item:nth-child(even){
+    @apply
+    bg-white
+}
+
+.addressEditContainer .profile-body .field-list-item:nth-child(odd){
+    @apply
+    bg-gray-200 rounded-md
+}
+
+.addressEditContainer .profile-body .field-list-item label{
+    @apply
+    relative flex font-semibold text-blue-400 items-center w-2/4 mb-0
+}
+
+.addressEditContainer .profile-body .field-list-item input{
+    @apply
+    w-full
+}

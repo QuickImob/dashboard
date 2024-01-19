@@ -1,0 +1,121 @@
+.profileEditContainer{
+    @apply
+    w-full flex gap-4 px-20 py-12
+}
+
+.profileEditContainer .profile-side-bar{
+    flex:1;
+
+    @apply
+    flex flex-col gap-4 items-center justify-center
+}
+
+.profileEditContainer .profile-body{
+    flex:2;
+
+    @apply
+    block gap-4
+}
+
+.profileEditContainer .profile-body .field-list-item{
+    flex:1;
+
+    @apply
+    relative flex items-center flex-row gap-4 px-4 h-16
+}
+
+.profileEditContainer .profile-body .field-list-item:nth-child(even){
+    @apply
+    bg-white
+}
+
+.profileEditContainer .profile-body .field-list-item:nth-child(odd){
+    @apply
+    bg-gray-200 rounded-md
+}
+
+.profileEditContainer .profile-body .field-list-item label{
+    @apply
+    relative flex font-semibold text-blue-400 items-center p-4 w-2/4 mb-0
+}
+
+.profileEditContainer .profile-body .field-list-item input{
+    @apply
+    w-full
+}
+
+.profileEditContainer .profile-body .field-list-item .inputContainer{
+    @apply
+    w-2/4
+}
+
+.profileEditContainer .profile-body .field-list-item label::after{
+    content:':';
+    display:flex;
+    font-size:20px;
+    font-weight:600;
+    color:#888;
+    position:absolute;
+    top:12px;
+    right:0;
+}
+
+.profileEditContainer .profile-side-bar .profile-image{
+    @apply
+    w-48 h-48 bg-gray-200 rounded-full border-4 border-blue-200 flex items-end justify-center
+    relative
+}
+
+.profileEditContainer .profile-side-bar .profile-image .edit-image{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 75px;
+    width: 160px;
+    border-radius: 0 0 80px 80px;
+    background: radial-gradient(ellipse at bottom,rgba(255, 255, 255, 0.5) 0%,rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 67%,rgba(0,0,0,0) 70%);
+    display:flex;
+    align-items:flex-end;
+    padding-bottom:10px;
+    justify-content:center;
+    cursor:pointer;
+}
+
+.profileEditContainer .profile-side-bar .profile-image .edit-image svg{
+    width:30px;
+    height:30px;
+    transition:0.2s;
+    opacity:0.6;
+}
+
+.profileEditContainer .profile-side-bar .profile-image .edit-image svg:hover{
+    transform:scale(1.2);
+    opacity:1;
+}
+
+.profileEditContainer .profile-side-bar .profile-info{
+    @apply
+    text-center
+}
+
+.profileEditContainer .profile-side-bar .profile-info h3{
+    @apply
+    text-xl font-semibold text-gray-800
+}
+
+.profileEditContainer .profile-side-bar .profile-info p{
+    @apply
+    m-0 text-gray-400
+}
+
+
+.profileEditContainer .profile-side-bar .profile-info small{
+    @apply
+    m-0 text-gray-400
+}
+
+.saveButtonContainer{
+    @apply
+    my-4 text-right
+}

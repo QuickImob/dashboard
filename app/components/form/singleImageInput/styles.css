@@ -1,0 +1,63 @@
+.sendFileField{
+    @apply
+    w-full p-4
+}
+
+.sendFileField .sendFileContainer{
+    @apply
+    w-full border-dashed border-2 border-gray-300 p-4 h-60 flex items-center justify-center
+    gap-2 flex-col text-lg text-blue-400 hover:text-blue-800 cursor-pointer
+}
+
+.sendFileField .sendFileContainer svg{
+    @apply
+    w-16 h-16
+}
+
+.thumbnailContainer{
+    @apply
+    p-2 border rounded-lg border-gray-200 w-full max-w-2xl mx-auto flex gap-4 relative mt-4
+}
+
+.thumbnailContainer:before{
+    content:'Prévia';
+    position:absolute;
+    top:-20px;
+    left:10px;
+    font-weight:600;
+    background-color:#cdcdcd;
+    color:#888;
+    padding:1px 8px;
+    border-radius:5px 5px 0 0;
+    font-size:12px;
+}
+
+.thumbnailContainer img{
+    @apply
+    h-28 rounded-lg
+}
+
+.thumbnailContainer .fileDetails{
+    @apply
+    h-full flex flex-col gap-2 justify-center
+}
+
+.thumbnailContainer .fileDetails p:nth-child(1){
+    @apply
+    m-0 font-bold mt-4
+}
+
+.thumbnailContainer .fileDetails p:nth-child(2){
+    @apply
+    m-0 italic
+}
+
+.containerSendButton{
+    @apply
+    w-full flex items-center justify-center mt-4
+}
+
+.containerSendButton button{
+    @apply
+    flex items-center gap-2
+}

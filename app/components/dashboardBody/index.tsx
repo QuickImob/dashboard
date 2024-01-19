@@ -23,7 +23,7 @@ export default function DashboardBody({children, menu}: DashboardBodyProps) {
     <div className={`dash-sidebar ${sidebarState}`}>
         <div className="dash-menu">
         {menu.map((item, index) => (
-            <Link key={index} href={item.link}>{item.icon}{item.label}</Link>
+            <Link key={index} href={item.link}>{item.icon}<span>{!sidebarState && item.label}</span></Link>
         ))}
         </div>
     </div>

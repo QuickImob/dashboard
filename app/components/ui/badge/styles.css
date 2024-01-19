@@ -1,0 +1,14 @@
+.badge{
+    @apply
+    inline-flex px-4 rounded-lg text-sm
+}
+
+.badge.active{
+    @apply
+    bg-emerald-400 text-white
+}
+
+.badge.inactive{
+    @apply
+    bg-red-400 text-white
+}

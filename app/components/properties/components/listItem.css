@@ -1,0 +1,54 @@
+.item-container{
+    @apply
+    w-full flex flex-row h-16 items-center transition bg-white
+    hover:scale-105 hover:shadow
+}
+
+.item-container.header{
+    @apply
+    bg-gray-400 h-12 text-white font-semibold text-sm
+    hover:scale-100
+}
+
+.item-cover{
+    width:60px;
+}
+
+.item-cover .item-image{
+    @apply
+    w-12 h-12 bg-gray-800 rounded
+}
+
+.item-content{
+    width:calc(100% - 60px);
+    
+    @apply
+    flex flex-row gap-2 border-b border-gray-200 h-16 justify-between items-center
+}
+
+.item-container.header .item-content{
+    @apply
+    border-none
+}
+
+.item-content div{
+    flex:4;
+}
+
+.item-content div:nth-child(5){
+    flex:2;
+}
+
+.item-content div:last-child{
+    flex:1;
+}
+
+.item-container.header div{
+    @apply
+    cursor-pointer flex gap-1 items-center
+}
+
+.item-content .edit svg{
+    @apply
+    w-6 h-6 text-gray-600 hover:text-gray-800 cursor-pointer
+}

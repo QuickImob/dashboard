@@ -1,20 +1,21 @@
 .login-main{
     @apply
-    h-screen overflow-hidden w-full flex items-center justify-center bg-gray-600
+    h-screen overflow-hidden w-full flex items-center justify-center bg-blue-200
 }
 
 .form-container{
+    max-height:80vh;
+
     @apply
-    w-full max-w-xl bg-white rounded-lg
+    w-full max-w-xl bg-white rounded-lg  overflow-auto
 }
 
 .container-language {
     @apply
-    absolute z-20 top-5 right-5 flex items-center gap-2
+    absolute z-20 top-5 right-5 flex items-center gap-2 
 }
 
 .container-language span {
     @apply
-    text-black text-sm
-    lg:text-blue-50
+    text-sm text-blue-800
 }

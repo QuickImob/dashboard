@@ -1,6 +1,6 @@
 .dash-header{
     @apply
-    h-16 border-b border-gray-400 w-full fixed bg-white
+    h-16 border-b border-gray-400 w-full fixed bg-white flex justify-between items-center
 }
 
 .dash-body{
@@ -10,9 +10,8 @@
 
 .dash-sidebar{
     width:300px;
-    
     @apply
-    h-full bg-white border-r border-gray-400 pt-16
+    h-full bg-white border-r border-gray-400 pt-16 transition-all duration-200
 }
 
 .dash-sidebar.true{
@@ -21,13 +20,23 @@
 
 .dash-content{
     @apply
-    pt-20 p-8
+    pt-20 p-8 w-full
 }
 
 .dash-menu a{
     @apply
     h-12 w-full gap-2 flex items-center px-4 hover:bg-gray-400 hover:text-white transition
     text-lg text-gray-600 font-bold
+}
+
+.dash-sidebar span{
+    @apply
+    transition-opacity opacity-0 delay-300
+}
+
+.dash-sidebar.false span{
+    @apply
+    transition-opacity opacity-100 delay-300
 }
 
 .dash-menu a svg{

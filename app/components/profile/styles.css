@@ -1,0 +1,30 @@
+.profile-container{
+    @apply
+    w-full
+}
+
+.profile-header{
+    @apply
+    w-full
+}
+
+.profile-content{
+    @apply
+    w-full flex gap-4 px-20 py-12
+}
+
+.profile-header .container-tabs{
+    @apply
+    flex  px-20 border-b-2 py-2 mb-4 flex-wrap
+}
+
+.profile-header .container-tabs .tab{
+    @apply
+    flex-1 flex gap-2 items-center justify-center cursor-pointer text-blue-400
+    hover:text-blue-800 h-12 rounded-md
+}
+
+.profile-header .container-tabs .tab.active{
+    @apply
+    bg-blue-600 text-white
+}

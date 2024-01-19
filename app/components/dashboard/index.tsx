@@ -19,7 +19,7 @@ export default function Dashboard({children}: { children: ReactNode }) {
     },
     {
       label:'Seus imóveis',
-      link:'/properties',
+      link:'/dashboard/properties',
       icon:<BsHouseGear />,
     },
   ]
@@ -31,7 +31,9 @@ export default function Dashboard({children}: { children: ReactNode }) {
         <div className="dash-header-center">
           Logo
         </div>
-        <div className="dash-header-right"></div>
+        <div className="dash-header-right">
+          
+        </div>
       </div>
       <div className="dash-body">
         <DashboardBody children={children} menu={menu}/>

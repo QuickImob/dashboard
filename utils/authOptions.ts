@@ -15,7 +15,7 @@ export const nextAuthOptions: NextAuthOptions = {
       // @ts-ignore
       async authorize(credentials: { email?: string; password?: string }, req) {
         const response = await axios
-          .post('/api/login', {
+          .post('login', {
             email: credentials?.email,
             password: credentials?.password
           })

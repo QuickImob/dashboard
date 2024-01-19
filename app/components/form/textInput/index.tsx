@@ -1,15 +1,20 @@
 import { Input, Label } from "reactstrap";
 import './styles.css';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface EmailInputProps {
     id: string
     label?: string
     sendInput: (input: { name: string; value: string }) => void
+    old?:any
   }
 
-export const TextInput = ({id, label, sendInput}: EmailInputProps) => {
+export const TextInput = ({id, label, sendInput, old}: EmailInputProps) => {
     const [inputValue, setInputValue] = useState('')
+
+    useEffect(() => {
+      setInputValue(old)
+    }, [old])
 
     function handleChange(value: string) {
         setInputValue(value)
@@ -23,7 +28,7 @@ export const TextInput = ({id, label, sendInput}: EmailInputProps) => {
 
     return(
         <div className="inputContainer">
-            <Label>{label}</Label>
+            {label && <Label>{label}</Label>}
             <Input
                 type="text"
                 id={id}

@@ -27,3 +27,8 @@
     @apply
     text-gray-500 m-0 cursor-pointer text-right underline
 }
+
+.login-button{
+    @apply
+    bg-blue-600 hover:bg-blue-800 flex gap-4 items-center justify-center border-none
+}

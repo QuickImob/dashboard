@@ -1,0 +1,41 @@
+.dash-header{
+    @apply
+    h-16 border-b border-gray-400 w-full fixed bg-white flex justify-between items-center
+    z-50
+}
+
+.dash-header .toogle-menu{
+    @apply
+    relative
+}
+
+.dash-header .toogle-icon{
+    @apply
+    w-10 h-10 border rounded-md border-gray-500 flex flex-col p-1 justify-around cursor-pointer
+    ml-4
+}
+
+.dash-header .toogle-icon.true{
+    @apply
+    ml-64
+}
+
+.dash-header .toogle-icon span{
+    @apply
+    w-full h-0.5 bg-gray-500 transition-all duration-200
+}
+
+.dash-header .toogle-icon.true span:nth-child(1){
+    transform:rotate(135deg);
+    margin-top:3px;
+}
+
+.dash-header .toogle-icon.true span:nth-child(2){
+    @apply
+    hidden
+}
+
+.dash-header .toogle-icon.true span:nth-child(3){
+    transform:rotate(-135deg);
+    margin-top:-24px;
+}
