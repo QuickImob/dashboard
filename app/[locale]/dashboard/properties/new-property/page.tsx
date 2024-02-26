@@ -1,35 +1,24 @@
-import Breadcrumbs from "@/app/components/breadcrumbs";
+'use client';
+
+import { useSelector, useDispatch } from 'react-redux';
 import { GadgetCard } from "@/app/components/card";
-import { getI18n } from "@/locales/server";
-import { IoAdd } from "react-icons/io5";
+import {setOpen} from '@/app/server/redux/actions';
+import { useEffect } from 'react';
+import './styles.css';
+import { NewPropertyForm } from '@/app/components/newPropertyForm';
 
-export default async function Page() {
-  const t = await getI18n()
+export default function Page() {
+  const open = useSelector((state: any) => state.open);
+  const dispatch = useDispatch();
 
-  const breadCrumbs = [
-    {
-      label:t('Dashboard'),
-      link:'/dashboard',
-    },
-    {
-      label:t('Your properties'),
-      link:'/dashboard/properties',
-    },
-  ]
-
-  const breadActions = [
-    {
-      label:t('New property'),
-      link:'/dashboard/properties/new-property',
-      icon:<IoAdd />,
-    },
-  ]
+  useEffect(() => {
+    dispatch(setOpen(!open));
+  }, [])
 
     return (
       <>
-      <Breadcrumbs data={breadCrumbs} actions={breadActions}/>
-      <GadgetCard className="w-full">
-
+      <GadgetCard className="w-full h-full">
+        <NewPropertyForm/>
       </GadgetCard>
       </>
     )

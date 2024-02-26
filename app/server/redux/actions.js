@@ -4,3 +4,8 @@ export const setOpen = (open) => {
       payload: open,
   };
 };
+
+export const toggleTourClass = (local) => ({
+  type: 'TOGGLE_TOUR_CLASS',
+  payload: { local },
+});

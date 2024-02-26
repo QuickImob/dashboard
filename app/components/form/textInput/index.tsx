@@ -7,9 +7,10 @@ interface EmailInputProps {
     label?: string
     sendInput: (input: { name: string; value: string }) => void
     old?:any
+    className?:string
   }
 
-export const TextInput = ({id, label, sendInput, old}: EmailInputProps) => {
+export const TextInput = ({id, label, sendInput, old, className}: EmailInputProps) => {
     const [inputValue, setInputValue] = useState('')
 
     useEffect(() => {
@@ -32,6 +33,7 @@ export const TextInput = ({id, label, sendInput, old}: EmailInputProps) => {
             <Input
                 type="text"
                 id={id}
+                className={className}
                 value={inputValue}
                 onChange={e => handleChange(e.target.value)}
             ></Input>

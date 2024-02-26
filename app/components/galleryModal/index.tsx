@@ -4,8 +4,9 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import './styles.css';
 import ImageUpload from '../form/singleImageInput';
 import { useI18n } from '@/locales/client';
+import YourGallery from '../form/yourGallery';
 
-function GalleryModal({ open, toggle }: { open: boolean; toggle: () => void }) {
+function GalleryModal({ open, toggle, user }: { open: boolean; toggle: () => void; user:any }) {
     const t = useI18n()
     const [tabSelected, setTabSelected] = useState(1)
 
@@ -28,8 +29,11 @@ function GalleryModal({ open, toggle }: { open: boolean; toggle: () => void }) {
                     onClick={() => setTabSelected(2)}
                 ><IoCloudUploadOutline />{t('Send image')}</div>
             </div>
+            {tabSelected === 1 &&
+                <YourGallery user={user}/>
+            }
             {tabSelected === 2 &&
-                <ImageUpload onChange={handleFileChange} />
+                <ImageUpload user={user} onChange={handleFileChange} />
             }
         </ModalBody>
         <ModalFooter>

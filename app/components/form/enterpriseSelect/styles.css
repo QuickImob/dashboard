@@ -1,0 +1,12 @@
+.select-container{
+    @apply
+    flex gap-4
+}
+
+.select-container .owner-select{
+    width:calc(100% - 200px);
+}
+
+.select-container button{
+    width:200px;
+}

@@ -1,11 +1,15 @@
 'use client';
 
 import { useSelector, useDispatch } from 'react-redux';
-import {setOpen} from '@/app/server/redux/actions';
+import {setOpen, toggleTourClass} from '@/app/server/redux/actions';
 import './styles.css';
 import { ProfileMenu } from '../profileMenu';
+import { Button } from 'reactstrap';
+import { MdOutlineLiveHelp } from 'react-icons/md';
+import { useI18n } from '@/locales/client';
 
 export const DashHeader = () => {
+    const t = useI18n()
     const open = useSelector((state: any) => state.open);
     const dispatch = useDispatch();
 
@@ -25,7 +29,14 @@ export const DashHeader = () => {
       <div className="dash-header-center">
         Logo
       </div>
-      <ProfileMenu/>
+      <div className="help">
+        <Button
+          color="primary"
+          onClick={() => dispatch(toggleTourClass('new-property-page'))}
+        >{t('Interactive Help')}<MdOutlineLiveHelp /></Button>
+        <ProfileMenu/>
+      </div>
+
     </div>
   );
 };

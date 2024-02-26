@@ -1,5 +1,5 @@
 import { GadgetCard } from "@/app/components/card";
-import NewCompany from "@/app/components/newCompany";
+// import NewCompany from "@/app/components/newCompany";
 
 export default function Page() {
 
@@ -8,7 +8,7 @@ export default function Page() {
       <GadgetCard className="w-96">
         <p>teste</p>
       </GadgetCard>
-      <NewCompany/>
+      {/* <NewCompany/> */}
     </>
   )
 }

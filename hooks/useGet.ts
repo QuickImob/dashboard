@@ -18,7 +18,7 @@ export default function useGet(route?: string | null) {
     await axios
       .get(route, {
         headers: {
-          Authorization: "Bearer " + session?.token,
+          Authorization: `Bearer ${session && session.token}`,
         },
       })
       .then((response) => {

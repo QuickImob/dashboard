@@ -1,0 +1,103 @@
+.new-property-container {
+    @apply
+    overflow-hidden relative
+}
+
+.new-property-row{
+    @apply
+    flex flex-wrap relative gap-4
+}
+
+.new-property-container .new-property-left{
+    height:82vh;
+    @apply
+    flex-1 pr-4 flex flex-col justify-around
+}
+
+.new-property-container .new-property-left .content{
+    @apply
+    flex flex-col justify-center gap-4  max-w-lg
+}
+
+.new-property-container .new-property-left .footer{
+    @apply
+    mt-8 flex gap-4 items-center justify-end
+}
+
+.new-property-container .new-property-left .footer button{
+    @apply
+    flex gap-2 items-center
+}
+
+.new-property-container .new-property-left .footer button.disable{
+    @apply
+    bg-gray-400 border-gray-200
+}
+
+.new-property-container .new-property-left .step-icon svg{
+    @apply
+    w-16 h-16 fill-blue-200
+}
+
+.new-property-container .new-property-left h3{
+    @apply
+    text-blue-400 font-bold
+}
+
+.new-property-container .new-property-left p{
+    @apply
+    text-gray-600
+}
+
+.new-property-container .new-property-left label{
+    @apply
+    text-gray-400 text-sm font-semibold
+}
+
+.new-property-container .new-property-right{
+    height:82vh;
+    @apply
+    bg-gray-400 w-2/4 flex-1 rounded-lg bg-center bg-cover
+}
+
+.new-property-container .new-property-right.active{
+    height:82vh;
+    @apply
+    bg-white w-2/4 flex-1 relative z-30 rounded-lg
+}
+
+.new-property-overlay{
+    @apply
+    fixed w-full h-full bg-gray-800 z-20 inset-0 opacity-80
+}
+
+.new-form-container{
+    min-width:660px;
+    transform:translate(100%, 0);
+    @apply
+    bg-white w-1/4 absolute transition right-0 top-0 z-30 p-4 rounded-lg h-full
+}
+
+.new-form-container.active{
+    transform:translate(0, 0);
+}
+
+.new-form-container .new-form-close{
+    @apply
+    absolute top-4 right-4 cursor-pointer hover:scale-125 transition
+}
+
+.new-form-container .new-form-close svg{
+    @apply
+    w-8 h-8
+}
+
+.new-property-container .new-property-left .container-inputs{
+    @apply
+    flex flex-col gap-2
+}
+
+.new-property-container .new-property-left .row-inputs{
+    @apply
+    flex gap-4 flex-wrap
+}

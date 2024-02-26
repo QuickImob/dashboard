@@ -8,6 +8,7 @@ import DashboardBody from "@/app/components/dashboardBody";
 import { Provider } from 'react-redux';
 import store from '@/app/server/redux/store';
 import './styles.css'
+import { Tour } from "../tour";
 
 export default function Dashboard({children}: { children: ReactNode }) {
 
@@ -26,18 +27,20 @@ export default function Dashboard({children}: { children: ReactNode }) {
 
   return (
     <Provider store={store}>
-      <div className="dash-header">
-        <DashHeader />
-        <div className="dash-header-center">
-          Logo
+      <Tour>
+        <div className="dash-header">
+          <DashHeader />
+          <div className="dash-header-center">
+            Logo
+          </div>
+          <div className="dash-header-right">
+            
+          </div>
         </div>
-        <div className="dash-header-right">
-          
+        <div className="dash-body">
+          <DashboardBody children={children} menu={menu}/>
         </div>
-      </div>
-      <div className="dash-body">
-        <DashboardBody children={children} menu={menu}/>
-      </div>
+      </Tour>
     </Provider>
   )
 }

@@ -1,5 +1,6 @@
 const initialState = {
   open: false,
+  local: null,
 };
 
 const reducer = (state = initialState, action) => {
@@ -8,6 +9,11 @@ const reducer = (state = initialState, action) => {
           return {
               ...state,
               open: action.payload,
+          };
+      case 'TOGGLE_TOUR_CLASS':
+          return {
+            ...state,
+            local: action.payload.local,
           };
       default:
           return state;

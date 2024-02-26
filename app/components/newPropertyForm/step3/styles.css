@@ -1,0 +1,13 @@
+.new-property-container .new-property-left .row-inputs.street{
+    @apply
+    flex-nowrap
+}
+
+.new-property-container .new-property-left .row-inputs.city{
+    @apply
+    flex-nowrap
+}
+
+.new-property-container .new-property-left .row-inputs.street .inputContainer:nth-child(1){
+    width:90%;
+}

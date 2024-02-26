@@ -11,7 +11,7 @@
 .dash-sidebar{
     width:300px;
     @apply
-    h-full bg-white border-r border-gray-400 pt-16 transition-all duration-200
+    h-full bg-blue-600 pt-36 transition-all duration-200
 }
 
 .dash-sidebar.true{
@@ -23,10 +23,63 @@
     pt-20 p-8 w-full
 }
 
+.dash-menu{
+    @apply
+    flex flex-col gap-2
+}
+
 .dash-menu a{
     @apply
-    h-12 w-full gap-2 flex items-center px-4 hover:bg-gray-400 hover:text-white transition
-    text-lg text-gray-600 font-bold
+    h-12 w-full gap-2 flex items-center px-4 hover:bg-gray-100 hover:text-white transition
+    text-base text-white font-semibold no-underline hover:text-blue-600 relative
+}
+
+.dash-menu a.active{
+    @apply
+    text-blue-600 bg-gray-100
+}
+
+.dash-menu .item{
+    @apply
+    flex flex-col items-end
+}
+
+.dash-menu .bottom-curve{
+    width: 26px;
+    height: 26px;
+
+    @apply
+    overflow-hidden relative bg-gray-100
+}
+
+.dash-menu .bottom-curve::after{
+    content:'';
+    bottom: -11px;
+    left: -11px;
+    width: 150%;
+    height: 150%;
+
+    @apply
+    block absolute rounded-full bg-blue-600
+}
+
+.dash-menu .top-curve{
+    width: 26px;
+    height: 26px;
+
+    @apply
+    overflow-hidden relative bg-gray-100
+}
+
+.dash-menu .top-curve::after{
+    content:'';
+    top: -11px;
+    left: -11px;
+    width: 150%;
+    height: 150%;
+
+    @apply
+    block absolute rounded-full bg-blue-600
 }
 
 .dash-sidebar span{

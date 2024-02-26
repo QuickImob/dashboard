@@ -39,3 +39,13 @@
     transform:rotate(-135deg);
     margin-top:-24px;
 }
+
+.dash-header .help{
+    @apply
+    flex gap-4 items-center
+}
+
+.dash-header .help button{
+    @apply
+    flex gap-4 items-center
+}

@@ -1,0 +1,28 @@
+.incremental-container{
+    @apply
+    flex w-32
+}
+
+.incremental-container input{
+    @apply
+    w-16 px-2 text-right border border-gray-200
+}
+
+.incremental-container input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.incremental-container button{
+    @apply
+    bg-blue-600 w-20 text-white text-lg
+}
+
+.incremental-container button.next{
+    @apply
+    rounded-e
+}
+
+.incremental-container button.prev{
+    @apply
+    rounded-s
+}

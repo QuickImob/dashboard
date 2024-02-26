@@ -1,0 +1,15 @@
+
+.requiredContainer.active{
+    @apply
+    px-2 py-1 border-4 border-red-200 rounded-lg
+}
+
+.requiredContainer span{
+    @apply
+    hidden
+}
+
+.requiredContainer.active span{
+    @apply
+    block text-xs text-red-400 font-semibold
+}

@@ -98,6 +98,7 @@ export default function ProfileEdit({user}: ProfileEditProps) {
         </div>
         <GalleryModal
             open={galleryModalOpen}
+            user={user}
             toggle={() => setGalleryModalOpen(!galleryModalOpen)}
         />
     </div>

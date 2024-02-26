@@ -20,6 +20,31 @@ export default function usePost() {
       },
     })
       .then((response) => {
+        console.log(response.data)
+
+        setSuccess(response.data)
+      })
+      .catch((err) => {
+
+        setError(err.response?.data.errors)
+      })
+
+    setLoading(false)
+  }
+
+  async function handleFormPost(route: string, fields = {}) {
+    setLoading(true)
+    const session = await getSession()
+    setError({})
+
+    await axios.post(route, fields, {
+      headers: {
+        Authorization: `Bearer ${session && session.token}`,
+        'Content-Type': 'multipart/form-data',
+      },
+    })
+      .then((response) => {
+        console.log(response.data)
 
         setSuccess(response.data)
       })
@@ -53,5 +78,5 @@ export default function usePost() {
     setLoading(false)
   }
 
-  return {success, error, handlePost, handlePut, loading}
+  return {success, error, handlePost, handleFormPost, handlePut, loading}
 }

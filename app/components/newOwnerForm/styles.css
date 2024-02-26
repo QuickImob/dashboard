@@ -1,0 +1,24 @@
+.new-owner-container{
+    @apply
+    mt-8 flex gap-4 flex-col
+}
+
+.new-owner-container .new-owner-buttons{
+    @apply
+    mt-4 flex justify-end gap-2
+}
+
+.new-owner-container h3{
+    @apply
+    text-lg font-semibold text-blue-400
+}
+
+.new-owner-container label{
+    @apply
+    text-sm text-gray-400 font-semibold
+}
+
+.new-owner-buttons button.disable{
+    @apply
+    bg-gray-400 border-gray-200
+}

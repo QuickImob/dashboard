@@ -1,9 +1,6 @@
-'use client'
-
-import NewPropertyModal from '../newPropertyModal';
 import './styles.css'
 import { IoIosArrowForward } from "react-icons/io"
-import {useState} from 'react'
+import Link from 'next/link';
 
 interface BreadcrumbsProps {
     data:any;
@@ -11,12 +8,6 @@ interface BreadcrumbsProps {
 }
 
 export default function Breadcrumbs({data, actions}: BreadcrumbsProps) {
-
-    const [modalOpen, setModalOpen] = useState(false);
-
-    const openModal = () => {
-        setModalOpen(!modalOpen)
-    }
 
   return (
     <>
@@ -35,14 +26,10 @@ export default function Breadcrumbs({data, actions}: BreadcrumbsProps) {
         </div>
         <div className="breadcrumbs-actions">
         {actions && actions.map((item:any, index:any) => (
-            <button key={index} onClick={openModal}>{item.icon}{item.label}</button>
+            <Link href={item.link}><button key={index}>{item.icon}{item.label}</button></Link>
         ))}    
         </div>
     </div>
-    <NewPropertyModal
-        open={modalOpen}
-        toggle={openModal}
-    />
     </>
   )
 }

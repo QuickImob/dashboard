@@ -22,6 +22,7 @@ export default async function Page() {
     {
       label:t('New property'),
       icon:<IoAdd />,
+      link:'/dashboard/properties/new-property'
     },
   ]
 
